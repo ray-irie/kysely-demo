@@ -13,18 +13,15 @@ pnpm dev
 ```
 ローカル環境での各種ビルドは各フレームワークのdevコマンドをそのまま使用しているだけなので、Dockerfileは現状無関係です。
 
-# Prisma
-https://www.prisma.io/docs/getting-started/prisma-orm/quickstart/mysql
+# Atlas
+### DB schema を変更する場合
+1. schema.hcl を編集
+2. atlas schema apply（schemaの通りDBを変更、宣言的マイグレーション）
+3. atlas migrate diff（現在のdiffを生成）
+4. migration を commit（本番環境用のdiffをコミット）
+### 最新を Pull した場合
+- atlas migrate apply を実行する
+- schema apply は実行しない
 
-初回、マイグレーション時
-```
-npx prisma migrate dev --name init
-```
-シーディング（v6まではマイグレーション時に自動で走っていたがv7からは手動必須になった）
-```
-npx prisma db seed
-```
-PrismaClientの生成
-```
-npx prisma generate
-```
+# Schema
+pnpm kysely:codegen
