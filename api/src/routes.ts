@@ -1,6 +1,6 @@
 import { Hono } from "hono";
-import users from "./http/users/users";
 import posts from "./http/posts/posts";
+import users from "./http/users/users";
 
 const app = new Hono();
 

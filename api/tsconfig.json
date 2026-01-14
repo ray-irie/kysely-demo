@@ -1,14 +1,14 @@
 {
-  "compilerOptions": {
-    "composite": true,
-    "moduleDetection": "force",
-    "module": "Preserve",
-    "resolveJsonModule": true,
-    "allowJs": true,
-    "esModuleInterop": true,
-    "isolatedModules": true,
-    "types": ["node"],
-    "strict": true
-  },
-  "include": ["**/*.ts"]
+	"compilerOptions": {
+		"composite": true,
+		"moduleDetection": "force",
+		"module": "Preserve",
+		"resolveJsonModule": true,
+		"allowJs": true,
+		"esModuleInterop": true,
+		"isolatedModules": true,
+		"types": ["node"],
+		"strict": true
+	},
+	"include": ["**/*.ts"]
 }

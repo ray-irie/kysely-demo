@@ -1,9 +1,9 @@
 export class APIError extends Error {
-  constructor(
-    public status: number,
-    public title: string,
-    public detail: string,
-  ) {
-    super(title);
-  }
+	constructor(
+		public status: number,
+		public title: string,
+		public detail: string,
+	) {
+		super(title);
+	}
 }

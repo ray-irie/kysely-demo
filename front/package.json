@@ -1,24 +1,24 @@
 {
-  "name": "front",
-  "dependencies": {
-    "@hono/client": "^0.0.3",
-    "hono": "^4.11.1",
-    "next": "^16.1.0",
-    "react": "^19.2.3",
-    "react-dom": "^19.2.3"
-  },
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint",
-    "lint:fix": "eslint --fix",
-    "check-types": "tsc --noEmit"
-  },
-  "packageManager": "pnpm@9.7.0+sha512.dc09430156b427f5ecfc79888899e1c39d2d690f004be70e05230b72cb173d96839587545d09429b55ac3c429c801b4dc3c0e002f653830a420fa2dd4e3cf9cf",
-  "devDependencies": {
-    "@types/node": "25.0.3",
-    "@types/react": "19.2.7",
-    "typescript": "5.9.3"
-  }
+	"name": "front",
+	"dependencies": {
+		"@hono/client": "^0.0.3",
+		"hono": "^4.11.1",
+		"next": "^16.1.0",
+		"react": "^19.2.3",
+		"react-dom": "^19.2.3"
+	},
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "eslint",
+		"lint:fix": "eslint --fix",
+		"check-types": "tsc --noEmit"
+	},
+	"packageManager": "pnpm@9.7.0+sha512.dc09430156b427f5ecfc79888899e1c39d2d690f004be70e05230b72cb173d96839587545d09429b55ac3c429c801b4dc3c0e002f653830a420fa2dd4e3cf9cf",
+	"devDependencies": {
+		"@types/node": "25.0.3",
+		"@types/react": "19.2.7",
+		"typescript": "5.9.3"
+	}
 }
