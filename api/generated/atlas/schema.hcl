@@ -6,12 +6,12 @@ table "users" {
     auto_increment = true
   }
   column "name" {
-    null = true
+    null = false
     type = varchar(255)
   }
-  column "age" {
+  column "email" {
     null = false
-    type = int
+    type = varchar(255)
   }
   primary_key {
     columns = [column.id]
