@@ -53,4 +53,43 @@ export class UserRepository implements UserRepository {
       email: new Email(userResult.email),
     });
   }
+
+  async findPostsByUserId(userId: number) {
+    const posts = await db
+      .selectFrom("posts")
+      .where("owner_id", "=", userId)
+      .selectAll()
+      .execute();
+
+    return posts;
+  }
+
+  async findPostsWithOwner(userId: number) {
+    const results = await db
+      .selectFrom("posts")
+      .leftJoin("users", "posts.owner_id", "users.id")
+      .where("posts.owner_id", "=", userId)
+      .select([
+        "posts.id as post_id",
+        "posts.title as post_title",
+        "posts.owner_id as post_owner_id",
+        "users.id as user_id",
+        "users.name as user_name",
+        "users.email as user_email",
+      ])
+      .execute();
+
+    return results.map(row => ({
+      post: {
+        id: row.post_id,
+        title: row.post_title,
+        owner_id: row.post_owner_id,
+      },
+      user: row.user_id ? {
+        id: row.user_id,
+        name: row.user_name,
+        email: row.user_email,
+      } : null,
+    }));
+  }
 }
